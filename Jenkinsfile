@@ -14,6 +14,7 @@ pipeline{
             steps{
                 script{
                     trivy_fs()
+                }
             }
         }
         stage("Building the docker image"){
