@@ -13,7 +13,7 @@ pipeline{
         stage("Trivy system scan report"){
             steps{
                 script{
-                    trivy_fs()
+                    trivy()
                 }
             }
         }
