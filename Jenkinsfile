@@ -6,7 +6,7 @@ pipeline{
         stage("Code checkout"){
             steps{
                 script {
-                    clone("https://github.com/shreeaws/two-tier-flask-app.git", branch: "master")
+                    clone("https://github.com/shreeaws/two-tier-flask-app.git", "master")
                 }
             }
         }
