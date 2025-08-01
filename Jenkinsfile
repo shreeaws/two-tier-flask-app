@@ -12,7 +12,7 @@ pipeline{
         }
         stage("Trivy system scan report"){
             steps{
-                sh "trivy fs . -o results.json
+                sh "trivy fs . -o results.json"
             }
         }
         stage("Building the docker image"){
