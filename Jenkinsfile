@@ -5,9 +5,7 @@ pipeline{
     stages{
         stage("Code checkout"){
             steps{
-                script {
-                    clone("https://github.com/shreeaws/two-tier-flask-app.git", "master")
-                }
+                git url: "https://github.com/shreeaws/two-tier-flask-app.git", branch: "master"
             }
         }
         stage("Trivy system scan report"){
