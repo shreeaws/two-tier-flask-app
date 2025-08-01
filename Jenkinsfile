@@ -38,4 +38,20 @@ pipeline{
             }
         }
     }
+post {
+    success {
+        script {
+        emailext body: 'Build Successful',
+                 subject: 'Build successful',
+                 to: 'shreetatte06@gmail.com'
+        }
+    }
+    failure{
+        script {
+        emailext body: 'Build failed',
+                 subject: 'Build failed',
+                 to: 'shreetatte06@gmail.com'
+        }
+    }
+}
 }
